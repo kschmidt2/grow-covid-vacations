@@ -22,7 +22,7 @@ $breakpoint-lg: 717px;
 
 @import "colors";
 
-.chart-area {
+.chart-area-covid-vacations {
   @import "type";
   @import "highcharts";
 
@@ -51,14 +51,79 @@ $breakpoint-lg: 717px;
     width: 100%;
     height: 300px;
     margin-top: -10px;
-    @include sm-md-xl {
-      height: 400px;
-    }
   }
 
   & .grow-logo {
     width: 214px;
     margin-top: 20px;
+  }
+
+  & #chart-container-CV1 {
+    .highcharts-yaxis-labels {
+      & span:last-child {
+        transform: translate(10px,0) !important;
+        &:after {
+          content: "%";
+      }
+      }
+    }
+  }
+  & #chart-container-CV2 {
+    .highcharts-lollipop-low {
+      fill: $slate-secondary-4;
+    stroke: $slate-secondary-4;
+    }
+    .highcharts-yaxis-labels {
+      & span:last-child {
+        &:before {
+          content: "$";
+      }
+      }
+    }
+  }
+  & #chart-container-CV3 {
+    .highcharts-lollipop-low {
+      fill: $slate-secondary-4;
+    stroke: $slate-secondary-4;
+    }
+  }
+  & #chart-container-CV4 {
+    .highcharts-color-1 {
+      fill: $green-primary;
+      stroke: $green-primary;
+    }
+    
+    .highcharts-color-0 {
+      fill: $slate-secondary-3;
+      stroke: $slate-secondary-3;
+    }
+    .highcharts-yaxis-labels {
+      & span:last-child {
+        transform: translate(10px,0) !important;
+        &:after {
+          content: "%";
+      }
+      }
+    }
+  }
+  & #chart-container-CV5 {
+    
+  }
+  & #chart-container-CV6 {
+    .highcharts-yaxis-labels {
+      & span:first-child {
+        &:after {
+          content: "%";
+      }
+      }
+    }
+    
+  }
+  & #chart-container-CV7 {
+    
+  }
+  & #chart-container-CV8 {
+    
   }
   
 }
