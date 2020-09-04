@@ -370,108 +370,114 @@ function drawHighcharts() {
         }
     })
 
-    // Highcharts.chart("chart-container-CV5", {
-    //     chart: {
-    //         type: 'column',
-    //         styledMode: true,
-    //         spacingBottom: 25,
-    //         spacingRight: 100,
-    //         spacingLeft: 5,
-    //         spacingTop: 20
-    //     }, 
-    //     title: {
-    //         text: null
-    //     },
-    //     data: {
-    //         googleSpreadsheetKey: '1a53u8oNxFoH69P6uoChh8P2899e2KG5NhLYjfhDY9Vk',
-    //         googleSpreadsheetWorksheet: 5,
-    //         endRow: 3
-    //     },
-    //     // for bar charts only
-    //     plotOptions: {
-    //         series: {
-    //             groupPadding: 0.1
-    //         } 
-    //     },
-    //     // for line charts only
-    //     // plotOptions: {
-    //     //     series: {
-    //     //         lineWidth: 1,
-    //     //         // clip: false,
-    //     //         marker: {
-    //     //             enabled: false,
-    //     //             symbol: 'circle',
-    //     //             fillColor: '#ffffff',
-    //     //             states: {
-    //     //                 hover: {
-    //     //                     fillColor: '#ffffff'
-    //     //                 }
-    //     //             }
-    //     //         }
-    //     //     }
-    //     // },
-    //     legend: {
-    //         align: 'right',
-    //         symbolRadius: 0,
-    //         verticalAlign: 'top',
-    //         x: 10,
-    //         itemMarginTop: -10
-    //     },
-    //     xAxis: {
-    //         labels: {
-    //             autoRotation: false,
-    //             overflow: 'allow',
-    //             style: {
-    //                 whiteSpace: 'nowrap',
-    //             }
-    //         },
-    //         tickLength: 5,
-    //         // edits xAxis ticks
-    //         // dateTimeLabelFormats: {
-    //         //     week: '%b. %e',
-    //         // },
-    //         // tickInterval: 24 * 3600 * 1000 * 7
-    //     },
-    //     yAxis: {
-    //         title: false,
-    //         labels: {
-    //             useHTML: true,
-    //             overflow: 'allow'
-    //         },
-    //         // adds commas to thousands
-    //         // formatter: function () {
-    //         //     return Highcharts.numberFormat(this.value,0,'.',',');
-    //         // },
-    //     },
-    //     credits: {
-    //         enabled: false
-    //     },
-    //     tooltip: {
-    //         shadow: false,
-    //         padding: 10,
-    //         valueDecimals: 0,
-    //         shared: true,
-    //     },
-    //     responsive: {
-    //         rules: [{
-    //         condition: {
-    //             maxWidth: 500
-    //         },
-    //         chartOptions: {
-    //             chart: {
-    //             spacingRight: 10
-    //             },
-    //             legend: {
-    //                 align: 'left',
-    //                 x: -18
-    //             },
-    //             tooltip: {
-    //                 enabled: false
-    //             },
-    //         }
-    //         }]
-    //     }
-    // })
+    Highcharts.chart("chart-container-CV5", {
+        chart: {
+            type: 'column',
+            styledMode: true,
+            spacingBottom: 25,
+            spacingRight: 100,
+            spacingLeft: 5,
+            spacingTop: 20
+        }, 
+        title: {
+            text: null
+        },
+        data: {
+            googleSpreadsheetKey: '1a53u8oNxFoH69P6uoChh8P2899e2KG5NhLYjfhDY9Vk',
+            googleSpreadsheetWorksheet: 6,
+            startRow: 25,
+            endColumn: 2
+        },
+        // for bar charts only
+        plotOptions: {
+            series: {
+                groupPadding: 0.1,
+                clip: false
+            } 
+        },
+        // for line charts only
+        // plotOptions: {
+        //     series: {
+        //         lineWidth: 1,
+        //         // clip: false,
+        //         marker: {
+        //             enabled: false,
+        //             symbol: 'circle',
+        //             fillColor: '#ffffff',
+        //             states: {
+        //                 hover: {
+        //                     fillColor: '#ffffff'
+        //                 }
+        //             }
+        //         }
+        //     }
+        // },
+        legend: {
+            align: 'right',
+            symbolRadius: 0,
+            verticalAlign: 'top',
+            x: 10,
+            itemMarginTop: -10
+        },
+        xAxis: {
+            labels: {
+                autoRotation: false,
+                overflow: 'allow',
+                style: {
+                    whiteSpace: 'nowrap',
+                }
+            },
+            tickLength: 5,
+            // edits xAxis ticks
+            // dateTimeLabelFormats: {
+            //     week: '%b. %e',
+            // },
+            // tickInterval: 24 * 3600 * 1000 * 7
+        },
+        yAxis: {
+            title: false,
+            labels: {
+                useHTML: true,
+                overflow: 'allow'
+            },
+            min: -75,
+            max: 50,
+            tickAmount: 6
+            // adds commas to thousands
+            // formatter: function () {
+            //     return Highcharts.numberFormat(this.value,0,'.',',');
+            // },
+        },
+        credits: {
+            enabled: false
+        },
+        tooltip: {
+            shadow: false,
+            padding: 10,
+            valueDecimals: 0,
+            shared: true,
+            valueSuffix: '%'
+        },
+        responsive: {
+            rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                chart: {
+                spacingRight: 10
+                },
+                legend: {
+                    align: 'left',
+                    x: -18
+                },
+                tooltip: {
+                    enabled: false
+                },
+            }
+            }]
+        }
+    })
 
     Highcharts.chart("chart-container-CV6", {
         chart: {
@@ -556,110 +562,87 @@ function drawHighcharts() {
         }
     })
 
-    // Highcharts.chart("chart-container-CV7", {
-    //     chart: {
-    //         type: 'bar',
-    //         styledMode: true,
-    //         spacingBottom: 25,
-    //         spacingRight: 100,
-    //         spacingLeft: 5,
-    //         spacingTop: 20
-    //     }, 
-    //     title: {
-    //         text: null
-    //     },
-    //     data: {
-    //         googleSpreadsheetKey: '1a53u8oNxFoH69P6uoChh8P2899e2KG5NhLYjfhDY9Vk',
-    //         googleSpreadsheetWorksheet: 7,
-    //         endRow: 4
-    //     },
-    //     // for bar charts only
-    //     plotOptions: {
-    //         lowColor: 'red',
-    //         series: {
-    //             groupPadding: 0.1
-    //         } 
-    //     },
-    //     // for line charts only
-    //     // plotOptions: {
-    //     //     series: {
-    //     //         lineWidth: 1,
-    //     //         // clip: false,
-    //     //         marker: {
-    //     //             enabled: false,
-    //     //             symbol: 'circle',
-    //     //             fillColor: '#ffffff',
-    //     //             states: {
-    //     //                 hover: {
-    //     //                     fillColor: '#ffffff'
-    //     //                 }
-    //     //             }
-    //     //         }
-    //     //     }
-    //     // },
-    //     legend: {
-    //         align: 'right',
-    //         symbolRadius: 0,
-    //         verticalAlign: 'top',
-    //         x: 10,
-    //         itemMarginTop: -10
-    //     },
-    //     xAxis: {
-    //         labels: {
-    //             autoRotation: false,
-    //             overflow: 'allow',
-    //             style: {
-    //                 whiteSpace: 'nowrap',
-    //             }
-    //         },
-    //         tickLength: 5,
-    //         // edits xAxis ticks
-    //         // dateTimeLabelFormats: {
-    //         //     week: '%b. %e',
-    //         // },
-    //         // tickInterval: 24 * 3600 * 1000 * 7
-    //     },
-    //     yAxis: {
-    //         title: false,
-    //         labels: {
-    //             useHTML: true,
-    //             overflow: 'allow'
-    //         },
-    //         max: 60
-    //         // adds commas to thousands
-    //         // formatter: function () {
-    //         //     return Highcharts.numberFormat(this.value,0,'.',',');
-    //         // },
-    //     },
-    //     credits: {
-    //         enabled: false
-    //     },
-    //     tooltip: {
-    //         shadow: false,
-    //         padding: 10,
-    //         valueDecimals: 0,
-    //         shared: true,
-    //     },
-    //     responsive: {
-    //         rules: [{
-    //         condition: {
-    //             maxWidth: 500
-    //         },
-    //         chartOptions: {
-    //             chart: {
-    //             spacingRight: 10
-    //             },
-    //             legend: {
-    //                 align: 'left',
-    //                 x: -18
-    //             },
-    //             tooltip: {
-    //                 enabled: false
-    //             },
-    //         }
-    //         }]
-    //     }
-    // })
+    Highcharts.chart("chart-container-CV8", {
+        chart: {
+            type: 'dumbbell',
+            styledMode: true,
+            spacingBottom: 25,
+            spacingRight: 100,
+            spacingLeft: 10,
+            spacingTop: 20
+        }, 
+        title: {
+            text: null
+        },
+        data: {
+            googleSpreadsheetKey: '1a53u8oNxFoH69P6uoChh8P2899e2KG5NhLYjfhDY9Vk',
+            googleSpreadsheetWorksheet: 9,
+        },
+        // for bar charts only
+        plotOptions: {
+            series: {
+                groupPadding: 0.1
+            } 
+        },
+        legend: {
+            enabled: false
+        },
+        xAxis: {
+            labels: {
+                autoRotation: false,
+                overflow: 'allow',
+                style: {
+                    whiteSpace: 'nowrap',
+                }
+            },
+            tickLength: 5,
+            // edits xAxis ticks
+            // dateTimeLabelFormats: {
+            //     week: '%b. %e',
+            // },
+            // tickInterval: 24 * 3600 * 1000 * 7
+        },
+        yAxis: {
+            title: false,
+            labels: {
+                useHTML: true,
+                overflow: 'allow'
+            },
+            // adds commas to thousands
+            // formatter: function () {
+            //     return Highcharts.numberFormat(this.value,0,'.',',');
+            // },
+        },
+        credits: {
+            enabled: false
+        },
+        tooltip: {
+            shadow: false,
+            padding: 10,
+            valueDecimals: 0,
+            valuePrefix: '$',
+            shared: true,
+        },
+        responsive: {
+            rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                chart: {
+                spacingRight: 10
+                },
+                legend: {
+                    align: 'left',
+                    x: -18
+                },
+                tooltip: {
+                    enabled: false
+                },
+            }
+            }]
+        }
+    })
 
 }
 

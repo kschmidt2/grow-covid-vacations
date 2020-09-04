@@ -88,6 +88,9 @@ $breakpoint-lg: 717px;
     }
   }
   & #chart-container-CV4 {
+    @include x-small {
+      margin-bottom: 25px;
+  }
     .highcharts-color-1 {
       fill: $green-primary;
       stroke: $green-primary;
@@ -107,7 +110,23 @@ $breakpoint-lg: 717px;
     }
   }
   & #chart-container-CV5 {
-    
+    @include x-small {
+        margin-bottom: 25px;
+    }
+    .highcharts-axis-line {
+      stroke: $slate-secondary-3;
+    };
+    .highcharts-grid-line {
+      &:nth-child(4) {
+        stroke: $slate-secondary-6;
+      }   
+    }
+    & span:last-child {
+      transform: translate(10px,0) !important;
+      &:after {
+        content: "%";
+    }
+    }
   }
   & #chart-container-CV6 {
     .highcharts-yaxis-labels {
@@ -119,11 +138,19 @@ $breakpoint-lg: 717px;
     }
     
   }
-  & #chart-container-CV7 {
-    
-  }
+
   & #chart-container-CV8 {
-    
+    .highcharts-lollipop-high {
+      fill: $slate-secondary-4;
+    stroke: $slate-secondary-4;
+    }
+    .highcharts-yaxis-labels {
+      & span:last-child {
+        &:before {
+          content: "$";
+      }
+      }
+    }
   }
   
 }

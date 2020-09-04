@@ -71,6 +71,12 @@ $font-stack: 'Avenir', 'Avenir Next', 'Arial', sans-serif;
         } 
 }
 
+.chart-source-extra {
+    @include x-small {
+        margin-bottom: 15px;
+    }
+}
+
 .strong {
     font-weight: 600;
 }
